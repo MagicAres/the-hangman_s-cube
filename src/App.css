@@ -1,0 +1,217 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #33344c;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container h1 {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hangman-box,
+.cube-box {
+  background: #33344c;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.word {
+  font-size: 32px;
+  letter-spacing: 8px;
+  margin: 15px 0;
+}
+
+.letters button {
+  margin: 3px;
+  padding: 6px 10px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.letters button:disabled {
+  opacity: 0.4;
+}
+
+.win {
+  color: #00ff80
+}
+
+.lose {
+  color: #ff4080
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.letters-grid button {
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+
+.my-glow-button {
+  padding: 10px 20px;
+  background-color: #5b1059;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 5px #e93899b3;
+}
+
+.my-glow-button:hover {
+  box-shadow:
+    0 0 15px rgba(183, 109, 240, 0.9),
+    0 0 30px rgba(129, 14, 100, 0.6),
+    0 0 20px rgba(183, 109, 240, 0.9),
+    0 0 40px rgba(183, 109, 240, 0.7),
+    0 0 80px rgba(183, 109, 240, 0.5),
+    0 0 120px rgba(183, 109, 240, 0.3);
+  transform: scale(1.1);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+
+}
+
+.modal-content {
+  background: #34034a;
+  color: #fff;
+  padding: 4px;
+  border-radius: 42px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-content img {
+  display: flex;
+  margin: 12px 12px;
+  padding: 8px 16px;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: #ff4080 5px 10px 10px;
+}
+
+.modal-content button {
+  padding: 8px 16px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  padding: 8px 16px;
+  margin-top: 12px;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px rgba(183, 109, 240, 0.9),
+    0 0 30px rgba(129, 14, 100, 0.6),
+    0 0 20px rgba(183, 109, 240, 0.9),
+    0 0 40px rgba(183, 109, 240, 0.7),
+    0 0 80px rgba(183, 109, 240, 0.5),
+    0 0 120px rgba(183, 109, 240, 0.3);
+  transform: scale(1.1);
+}
+.cube-wrapper {
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#rules {
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  width: 0;
+  color: #fff;
+  animation:
+    typing 4s steps(YourTextLength, end) 1 forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Animation du curseur : il clignote */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  background-color: transparent;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
