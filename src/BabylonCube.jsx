@@ -7,6 +7,7 @@ import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
 import { Texture } from "@babylonjs/core/Materials/Textures/texture";
 import { Vector3, Vector4 } from "@babylonjs/core/Maths/math.vector";
+import atlasUrl from './textures/atlas.png';
 
 export default function BabylonCube() {
   const canvasRef = useRef(null);
@@ -32,7 +33,8 @@ export default function BabylonCube() {
     light.intensity = 2.5;  // <-- lumière plus forte (par défaut = 1)
 
     const mat = new StandardMaterial("mat", scene);
-    mat.diffuseTexture = new Texture("/textures/atlas.png", scene);
+    // mat.diffuseTexture = new Texture(import.meta.env.BASE_URL + "/textures/atlas.png", scene);
+    mat.diffuseTexture = new Texture(atlasUrl, scene);
 
     const faceUV = [];
     for (let i = 0; i < 6; i++) {
