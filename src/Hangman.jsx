@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import HangmanCanvas from "./HangmanCanvas";
 import HangmanWord from "./HangmanWord";
+import urlImg from './assets/imgs/win.jpg';
 
 const words = [
   "CITROUILLE",
@@ -102,7 +103,7 @@ export default function Hangman() {
                {won && (
               <div className="image-container">
               <img
-                src={won ? "./src/assets/imgs/win.jpg" : '' }
+                src={won ? urlImg : '' }
                 alt={won ? "Victoire" : ''}
                 style={{ maxWidth: "80%", margin: "10px 0"}}
                 
