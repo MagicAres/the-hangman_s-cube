@@ -4,46 +4,56 @@ import HangmanCanvas from "./HangmanCanvas";
 import HangmanWord from "./HangmanWord";
 import urlImg from './assets/imgs/win.jpg';
 
+// const words = [
+//   "CITROUILLE",
+//   "LANTERNE",
+//   "FANTÔME",
+//   "MANOIR",
+//   "SORCIÈRE",
+//   "MAGIE",
+//   "CHATEAU",
+//   "SORTILÈGE",
+//   "SPECTRE",
+//   "BLANCHE-NEIGE",
+//   "ARAIGNÉE",
+//   "CIMETIÈRE",
+//   "CLAIRIÈRE",
+//   "MALEFIQUE",
+//   "VILAIN",
+//   "MONSTRE",
+//   "COFFRE",
+//   "PARCHEMIN",
+//   "ESPRIT",
+//   "ENCHANTEUR",
+//   "OMBRE",
+//   "TENEBRES",
+//   "MALEDICTION",
+//   "NUIT",
+//   "CRÂNE",
+//   "POTENCE",
+//   "BRUME",
+//   "RÉVERBĖRE",
+//   "CREPUSCULE",
+//   "SÉPULCRE",
+//   "VAMPIRE",
+//   "PHANTOM",
+//   "CHAUVE-SOURIS",
+//   "MARIONNETTE",
+//   "ENVOÛTER",
+//   "MYSTERE",
+//   "RÉMINISCENCE",
+//   "MIRAGE",
+//   "RESONANCE",
+// ];
 const words = [
+  "HALLOWEEN",
+  "TERROR",
+  "CHÂTEAU",
+  "MALÉFIQUE",
   "CITROUILLE",
-  "LANTERNE",
+  "ENFANCE",
   "FANTÔME",
-  "MANOIR",
-  "SORCIÈRE",
-  "MAGIE",
-  "CHATEAU",
-  "SORTILÈGE",
-  "SPECTRE",
-  "BLANCHE-NEIGE",
-  "ARAIGNÉE",
-  "CIMETIÈRE",
-  "CLAIRIÈRE",
-  "MALEFIQUE",
-  "VILAIN",
-  "MONSTRE",
-  "COFFRE",
-  "PARCHEMIN",
-  "ESPRIT",
-  "ENCHANTEUR",
-  "OMBRE",
-  "TENEBRES",
-  "MALEDICTION",
-  "NUIT",
-  "CRÂNE",
-  "POTENCE",
-  "BRUME",
-  "RÉVERBĖRE",
-  "CREPUSCULE",
-  "SÉPULCRE",
-  "VAMPIRE",
-  "PHANTOM",
-  "CHAUVE-SOURIS",
-  "MARIONNETTE",
-  "ENVOÛTER",
-  "MYSTERE",
-  "RÉMINISCENCE",
-  "MIRAGE",
-  "RESONANCE",
+  "DISNEY"
 ];
 
 export default function Hangman() {
@@ -100,14 +110,14 @@ export default function Hangman() {
                 </>
               )}
               <button onClick={handleRestart}>OK</button>
-               {won && (
-              <div className="image-container">
-              <img
-                src={won ? urlImg : '' }
-                alt={won ? "Victoire" : ''}
-                style={{ maxWidth: "80%", margin: "10px 0"}}
-                
-              /></div>)  }
+              {won && (
+                <div className="image-container">
+                  <img
+                    src={won ? urlImg : ''}
+                    alt={won ? "Victoire" : ''}
+                    style={{ maxWidth: "80%", margin: "10px 0" }}
+
+                  /></div>)}
             </div>
           </div>
         )}
