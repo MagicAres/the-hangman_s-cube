@@ -7,7 +7,7 @@ import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
 import { Texture } from "@babylonjs/core/Materials/Textures/texture";
 import { Vector3, Vector4 } from "@babylonjs/core/Maths/math.vector";
-import atlasUrl from './textures/atlas.png';
+import atlasUrl from './assets/textures/atlas.png';
 
 export default function BabylonCube() {
   const canvasRef = useRef(null);
